@@ -25,6 +25,8 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.annotation.StringRes
+import androidx.annotation.VisibleForTesting
+import androidx.annotation.VisibleForTesting.Companion.PRIVATE
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
@@ -217,7 +219,8 @@ class ManageNotetypes : AnkiActivity(R.layout.activity_manage_note_types) {
         return true
     }
 
-    private fun renameNotetype(state: NoteTypeItemState) {
+    @VisibleForTesting(otherwise = PRIVATE)
+    internal fun renameNotetype(state: NoteTypeItemState) {
         launchCatchingTask {
             val allNotetypes = viewModel.state.value.noteTypes
             val dialog =
@@ -253,7 +256,8 @@ class ManageNotetypes : AnkiActivity(R.layout.activity_manage_note_types) {
         }
     }
 
-    private fun deleteNotetype(state: NoteTypeItemState) {
+    @VisibleForTesting(otherwise = PRIVATE)
+    internal fun deleteNotetype(state: NoteTypeItemState) {
         launchCatchingTask {
             @StringRes val messageResourceId: Int? =
                 if (userAcceptsSchemaChange()) {

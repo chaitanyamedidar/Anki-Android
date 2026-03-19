@@ -17,7 +17,6 @@ package com.ichi2.anki.notetype
 
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
-import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.ichi2.anki.R
 import com.ichi2.anki.RobolectricTest
@@ -27,40 +26,24 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.shadows.ShadowDialog
 import org.robolectric.shadows.ShadowLooper
-import java.lang.reflect.Method
 
 @RunWith(AndroidJUnit4::class)
 class ManageNotetypesTest : RobolectricTest() {
-    private lateinit var activityScenario: ActivityScenario<ManageNotetypes>
-
     override fun setUp() {
         super.setUp()
         ensureCollectionLoadIsSynchronous()
         addStandardNoteType(TEST_NOTE_TYPE_NAME, arrayOf("front", "back"), "", "")
-        activityScenario = ActivityScenario.launch(ManageNotetypes::class.java)
-    }
-
-    override fun tearDown() {
-        super.tearDown()
-        activityScenario.close()
     }
 
     @Test
     fun `rename note type - whitespace only name keeps Rename button disabled`() =
         runTest {
-            activityScenario.onActivity { activity ->
-                val firstNoteType =
-                    activity.viewModel.state.value.noteTypes
-                        .first { it.name == TEST_NOTE_TYPE_NAME }
-                // renameNotetype is private, so we invoke it via reflection
-                val method: Method =
-                    ManageNotetypes::class.java.getDeclaredMethod(
-                        "renameNotetype",
-                        NoteTypeItemState::class.java,
-                    )
-                method.isAccessible = true
-                method.invoke(activity, firstNoteType)
-            }
+            val activity = startRegularActivity<ManageNotetypes>()
+            val firstNoteType =
+                activity.viewModel.state.value.noteTypes
+                    .first { it.name == TEST_NOTE_TYPE_NAME }
+            activity.renameNotetype(firstNoteType)
+
             ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
             val dialog = ShadowDialog.getLatestDialog() as AlertDialog

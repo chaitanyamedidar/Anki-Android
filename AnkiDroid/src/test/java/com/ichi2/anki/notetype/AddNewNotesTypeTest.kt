@@ -18,7 +18,6 @@ package com.ichi2.anki.notetype
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
-import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.ichi2.anki.R
 import com.ichi2.anki.RobolectricTest
@@ -32,27 +31,18 @@ import org.robolectric.shadows.ShadowLooper
 
 @RunWith(AndroidJUnit4::class)
 class AddNewNotesTypeTest : RobolectricTest() {
-    private lateinit var activityScenario: ActivityScenario<ManageNotetypes>
-
     override fun setUp() {
         super.setUp()
         ensureCollectionLoadIsSynchronous()
-        activityScenario = ActivityScenario.launch(ManageNotetypes::class.java)
-    }
-
-    override fun tearDown() {
-        super.tearDown()
-        activityScenario.close()
     }
 
     @Test
     fun `add note type - whitespace only name keeps OK button disabled`() =
         runTest {
-            activityScenario.onActivity { activity ->
-                val addNewNotesType = AddNewNotesType(activity)
-                activity.lifecycleScope.launch {
-                    addNewNotesType.showAddNewNotetypeDialog()
-                }
+            val activity = startRegularActivity<ManageNotetypes>()
+            val addNewNotesType = AddNewNotesType(activity)
+            activity.lifecycleScope.launch {
+                addNewNotesType.showAddNewNotetypeDialog()
             }
             ShadowLooper.runUiThreadTasksIncludingDelayedTasks()
 
