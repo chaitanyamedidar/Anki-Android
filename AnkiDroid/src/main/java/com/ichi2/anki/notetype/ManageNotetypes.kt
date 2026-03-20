@@ -26,7 +26,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
-import androidx.annotation.VisibleForTesting.Companion.PRIVATE
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
@@ -219,7 +218,7 @@ class ManageNotetypes : AnkiActivity(R.layout.activity_manage_note_types) {
         return true
     }
 
-    @VisibleForTesting(otherwise = PRIVATE)
+    @VisibleForTesting
     internal fun renameNotetype(state: NoteTypeItemState) {
         launchCatchingTask {
             val allNotetypes = viewModel.state.value.noteTypes
@@ -256,7 +255,7 @@ class ManageNotetypes : AnkiActivity(R.layout.activity_manage_note_types) {
         }
     }
 
-    @VisibleForTesting(otherwise = PRIVATE)
+    @VisibleForTesting
     internal fun deleteNotetype(state: NoteTypeItemState) {
         launchCatchingTask {
             @StringRes val messageResourceId: Int? =

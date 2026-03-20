@@ -29,15 +29,12 @@ import org.robolectric.shadows.ShadowLooper
 
 @RunWith(AndroidJUnit4::class)
 class ManageNotetypesTest : RobolectricTest() {
-    override fun setUp() {
-        super.setUp()
-        ensureCollectionLoadIsSynchronous()
-        addStandardNoteType(TEST_NOTE_TYPE_NAME, arrayOf("front", "back"), "", "")
-    }
-
     @Test
     fun `rename note type - whitespace only name keeps Rename button disabled`() =
         runTest {
+            ensureCollectionLoadIsSynchronous()
+            addStandardNoteType(TEST_NOTE_TYPE_NAME, arrayOf("front", "back"), "", "")
+
             val activity = startRegularActivity<ManageNotetypes>()
             val firstNoteType =
                 activity.viewModel.state.value.noteTypes

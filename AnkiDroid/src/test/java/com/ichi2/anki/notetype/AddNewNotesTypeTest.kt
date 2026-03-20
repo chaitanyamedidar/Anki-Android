@@ -31,11 +31,6 @@ import org.robolectric.shadows.ShadowLooper
 
 @RunWith(AndroidJUnit4::class)
 class AddNewNotesTypeTest : RobolectricTest() {
-    override fun setUp() {
-        super.setUp()
-        ensureCollectionLoadIsSynchronous()
-    }
-
     @Test
     fun `add note type - whitespace only name keeps OK button disabled`() =
         runTest {
