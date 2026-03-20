@@ -99,6 +99,10 @@
     <string name="webview_crash_loop_dialog_content">Tizim WebView “%1$s” kartasini koʻrsata olmadi.\n %2$s</string>
     <string name="slide_to_cancel" comment="Message shown when pressing the record button">Bekor qilish uchun suring</string>
     <string name="filter_by_flags" maxLength="41">Bayroqlar</string>
+    <!-- filtered deck options -->
+    <string name="filtered_option_delay_again">Delay for again</string>
+    <string name="filtered_option_delay_hard">Delay for hard</string>
+    <string name="filtered_option_delay_good">Delay for good</string>
     <!-- Custom study options -->
     <string name="custom_study_loading_tags">Teglar roʻyxati qurilmoqda</string>
     <!-- Study options -->
@@ -192,7 +196,7 @@
     <string name="dyn_deck_desc">Bu odatiy kun tartibidan tashqarida oʻqish uchun maxsus dasta. Koʻrib chiqilganidan soʻng kartalar avtomatik ravishda oʻzining asl dastalariga qaytariladi. Ushbu dastani dastalar roʻyxatidan oʻchirib tashlasangiz, qolgan barcha kartalar oʻzining asl dastalariga qaytariladi.</string>
     <string name="tag_editor_add_feedback">“%1$s” qoʻshishni tasdiqlash uchun “%2$s” tugmasini bosing</string>
     <string name="tag_editor_add_feedback_existing">Mavjud boʻlgan “%1$s” tegi tanlandi</string>
-    <string name="tag_already_exists">Tag already exists</string>
+    <string name="tag_already_exists">Teg allaqachon mavjud</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">apkg faylni ulashishda xatolik yuz berdi</string>
@@ -328,7 +332,7 @@
     <!-- Browser Options Dialog -->
     <string name="show_cards" comment="Label for toggle cards button in BrowserOptionsDialog">Kartalar</string>
     <string name="show_notes" comment="Label for toggle notes button in BrowserOptionsDialog">Qaydlar</string>
-    <string name="toggle_cards_notes">Kartalar/qaydlar almashtirish</string>
+    <string name="toggle_cards_notes">Karta/qaydlar almashtirish</string>
     <string name="truncate_content_help">Karta brauzerini har bir qator balandligini faqat dastlabki 3 ta tarkib qatorini koʻrsatish uchun qisqartirish</string>
     <string name="browser_options_dialog_heading">Karta brauzeri parametrlari</string>
     <string name="audio_saved">Ovoz yozuvi saqlandi</string>
@@ -359,7 +363,7 @@
     <string name="play_recording">Ijro etish</string>
     <string name="next_recording" comment="Description of a button to go to the next recording">Keyingi</string>
     <!--  AlertDialog in the deleteCardTemplate  -->
-    <string name="orphan_note_title">Karta turini oʻchirib boʻlmadi</string>
+    <string name="orphan_note_title">Karta turini oʻchirib boʻlmaydi</string>
     <string name="orphan_note_message">Ushbu karta turini oʻchirib tashlash baʼzi qaydlar kartasiz qolishiga olib keladi.</string>
     <string name="voice_not_supported">Ovoz qoʻllab-quvvatlanmaydi. Boshqasini sinab koʻring yoki ovoz dvijogini oʻrnating.</string>
     <!--Keyboard shortcuts dialog-->

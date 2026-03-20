@@ -54,7 +54,7 @@
     <string name="CardEditorModel">Type :</string>
     <string name="CardEditorTags">Étiquettes : %1$s</string>
     <string name="CardEditorCards">Cartes : %1$s</string>
-    <string name="edit_occlusions">Modifier les Occlusions</string>
+    <string name="edit_occlusions">Edit occlusions</string>
     <string name="paste_from_clipboard" maxLength="28">Coller</string>
     <string name="tag_name">Nom d\'étiquette</string>
     <string name="add_new_filter_tags">Ajouter/filtrer étiquettes</string>
@@ -99,6 +99,10 @@
     <string name="webview_crash_loop_dialog_content">Le système WebView n\'a pas réussi à afficher la carte « %1$s ».\n %2$s</string>
     <string name="slide_to_cancel" comment="Message shown when pressing the record button">Glissez pour annuler</string>
     <string name="filter_by_flags" maxLength="41">Marqueurs</string>
+    <!-- filtered deck options -->
+    <string name="filtered_option_delay_again">Delay for again</string>
+    <string name="filtered_option_delay_hard">Delay for hard</string>
+    <string name="filtered_option_delay_good">Delay for good</string>
     <!-- Custom study options -->
     <string name="custom_study_loading_tags">Création de la liste des labels en cours&#8230;</string>
     <!-- Study options -->
@@ -192,7 +196,7 @@
     <string name="dyn_deck_desc">Ceci est un paquet pour l\'étude en dehors des horaires normaux. Les cartes reviendront automatiquement à leur paquet d\'origine après leur révision. La suppression de ce paquet remettra toutes les cartes restantes dans leur paquet d\'origine.</string>
     <string name="tag_editor_add_feedback">Appuyez sur « %2$s » pour confirmer l\'addition de « %1$s »</string>
     <string name="tag_editor_add_feedback_existing">Étiquette existante «%1$s» sélectionnée</string>
-    <string name="tag_already_exists">Tag already exists</string>
+    <string name="tag_already_exists">Le mot-clé existe déjà</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Erreur lors du partage du fichier apkg</string>
@@ -208,7 +212,7 @@
     <string name="remove_wallpaper_image" maxLength="41">Retirer le fond d\'écran</string>
     <string name="remove_background_image">Retirer l\'arrière-plan ?</string>
     <!-- Card Template Browser Appearance -->
-    <string name="restore_default" maxLength="28">Rétablir par défaut</string>
+    <string name="restore_default" maxLength="28">Restore default</string>
     <string name="reviewer_tts_cloze_spoken_replacement">Vide</string>
     <!-- Whiteboard eraser mode toggle message in Reviewer -->
     <string name="white_board_eraser_enabled">Mode efface activé</string>
@@ -238,11 +242,11 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">Taille de la police</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">Afficher la barre d\'outils</string>
-    <string name="format_insert_bold">Format as bold</string>
-    <string name="format_insert_italic">Format as italic</string>
-    <string name="format_insert_underline">Format as underline</string>
-    <string name="insert_horizontal_line">Insert horizontal line</string>
-    <string name="insert_heading">Insert heading</string>
+    <string name="format_insert_bold">Formater en gras</string>
+    <string name="format_insert_italic">Formater en italique</string>
+    <string name="format_insert_underline">Souligner</string>
+    <string name="insert_horizontal_line">Insérer une ligne horizontale</string>
+    <string name="insert_heading">Insérer un entête</string>
     <string name="format_font_size">Change font size</string>
     <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">Texte du bouton</string>
@@ -328,7 +332,7 @@
     <!-- Browser Options Dialog -->
     <string name="show_cards" comment="Label for toggle cards button in BrowserOptionsDialog">Cartes</string>
     <string name="show_notes" comment="Label for toggle notes button in BrowserOptionsDialog">Notes</string>
-    <string name="toggle_cards_notes">Activer/Désactiver les Cartes/Notes</string>
+    <string name="toggle_cards_notes">Toggle cards/notes</string>
     <string name="truncate_content_help">Tronquer la hauteur de chaque ligne du navigateur pour ne montrer que les 3 premières lignes de contenu</string>
     <string name="browser_options_dialog_heading">Options du navigateur</string>
     <string name="audio_saved">Enregistrement sauvegardé</string>
@@ -344,7 +348,7 @@
     <string name="shared_decks_login_required">Veuillez vous connecter pour télécharger plus de decks</string>
     <string name="deck_description_field_hint">Description</string>
     <string name="deck_description_saved">Description mise à jour</string>
-    <string name="format_deck_description_as_markdown">Formater en tant que Markdown</string>
+    <string name="format_deck_description_as_markdown">Format as markdown</string>
     <string name="help_button_content_description">Ouvrir l\'aide pour \'%s\'</string>
     <string name="failed_to_copy">Échec de la copie</string>
     <plurals name="unbury_cards_feedback">
@@ -359,7 +363,7 @@
     <string name="play_recording">Lecture</string>
     <string name="next_recording" comment="Description of a button to go to the next recording">Suivant</string>
     <!--  AlertDialog in the deleteCardTemplate  -->
-    <string name="orphan_note_title">Impossible de supprimer le type de carte</string>
+    <string name="orphan_note_title">Cannot delete card type</string>
     <string name="orphan_note_message">Supprimer ce type de carte laissera certaines notes sans cartes.</string>
     <string name="voice_not_supported">Voix non prise en charge. Essayez une autre ou installez un moteur vocal.</string>
     <!--Keyboard shortcuts dialog-->
